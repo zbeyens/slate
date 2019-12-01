@@ -99,17 +99,17 @@ export interface PreviousSiblingInvalidError {
 export type MarkError = MarkPropertyInvalidError
 
 export type NodeError =
-  | ChildInvalidError
-  | ChildMaxInvalidError
-  | ChildMinInvalidError
-  | ChildUnexpectedError
-  | FirstChildInvalidError
-  | LastChildInvalidError
-  | MarkInvalidError
-  | NextSiblingInvalidError
-  | NodePropertyInvalidError
-  | NodeTextInvalidError
-  | ParentInvalidError
-  | PreviousSiblingInvalidError
+  & ChildInvalidError
+  & ChildMaxInvalidError
+  & ChildMinInvalidError
+  & ChildUnexpectedError
+  & FirstChildInvalidError
+  & LastChildInvalidError
+  & MarkInvalidError
+  & NextSiblingInvalidError
+  & NodePropertyInvalidError
+  & NodeTextInvalidError
+  & ParentInvalidError
+  & PreviousSiblingInvalidError
 
-export type SchemaError = MarkError | NodeError
+export type SchemaError = MarkError & NodeError
